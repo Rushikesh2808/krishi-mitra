@@ -1,0 +1,301 @@
+export type Language = 'en' | 'mr' | 'hi';
+
+export interface LanguageOption {
+  code: Language;
+  name: string;
+  nativeName: string;
+  flag?: string;
+}
+
+export const SUPPORTED_LANGUAGES: LanguageOption[] = [
+  { code: 'en', name: 'English', nativeName: 'English' },
+  { code: 'mr', name: 'Marathi', nativeName: 'मराठी' },
+  { code: 'hi', name: 'Hindi', nativeName: 'हिंदी' },
+];
+
+export interface TranslationDictionary {
+  nav: {
+    farmerDashboard: string;
+    fpoDashboard: string;
+    buyerDashboard: string;
+    cropsAndStock: string;
+    mandiComparison: string;
+    priceForecast: string;
+    sellAdvisor: string;
+    netEarnings: string;
+    fpoMarketplace: string;
+    buyerDirectory: string;
+    profile: string;
+    settings: string;
+    notifications: string;
+    switchRole: string;
+    active: string;
+    portal: string;
+    logout: string;
+  };
+  common: {
+    save: string;
+    cancel: string;
+    edit: string;
+    delete: string;
+    view: string;
+    viewAll: string;
+    search: string;
+    filter: string;
+    refresh: string;
+    submit: string;
+    back: string;
+    next: string;
+    close: string;
+    all: string;
+    available: string;
+    listed: string;
+    committed: string;
+    sold: string;
+    status: string;
+    actions: string;
+    loading: string;
+    success: string;
+    error: string;
+    qtl: string;
+    quintal: string;
+    rupeesPerQtl: string;
+    acres: string;
+    verified: string;
+    language: string;
+    selectLanguage: string;
+  };
+  roles: {
+    farmer: string;
+    fpo: string;
+    buyer: string;
+    farmerDesc: string;
+    fpoDesc: string;
+    buyerDesc: string;
+  };
+  dashboard: {
+    welcome: string;
+    selectCropPrompt: string;
+    harvestedVolume: string;
+    todayMarketSnapshot: string;
+    modalPrice: string;
+    priceTrend: string;
+    bestMandi: string;
+    bestMandiNetPrice: string;
+    lowestTransportMandi: string;
+    sellingAdvisory: string;
+    sellNow: string;
+    wait: string;
+    netEarningsEngine: string;
+    activeProduceLots: string;
+    receivedBuyerOffers: string;
+    recentAlerts: string;
+    manageStock: string;
+    newProduce: string;
+    openNegotiations: string;
+    inventorySummaryTitle: string;
+    inventorySummarySubtitle: string;
+    totalHarvested: string;
+    availableToSell: string;
+    currentlyListed: string;
+    committedSold: string;
+    uncommittedStock: string;
+  };
+  crops: {
+    soybean: string;
+    onion: string;
+    cotton: string;
+    wheat: string;
+    gram: string;
+    maize: string;
+    tur: string;
+    gradeAExport: string;
+    gradeACommercial: string;
+    gradeBFAQ: string;
+    shed: string;
+    warehouse: string;
+    kandaChawl: string;
+    awaitingStorage: string;
+    soldOut: string;
+  };
+  inventory: {
+    title: string;
+    subtitle: string;
+    addCrop: string;
+    editCrop: string;
+    cropName: string;
+    cropVariety: string;
+    cultivationArea: string;
+    sowingDate: string;
+    harvestDate: string;
+    estimatedYield: string;
+    actualHarvested: string;
+    qualityGrade: string;
+    storageFacility: string;
+    storageLocation: string;
+    produceNotes: string;
+    listOnMarket: string;
+    stockEquation: string;
+    availableStock: string;
+    cannotExceedStock: string;
+    maxStock: string;
+    expectedPrice: string;
+    publishListing: string;
+    deleteConfirm: string;
+    stockStatus: string;
+    freeStock: string;
+  };
+  mandi: {
+    title: string;
+    subtitle: string;
+    distance: string;
+    modalRate: string;
+    minMaxRate: string;
+    transportCost: string;
+    netRealization: string;
+    profitAdvantage: string;
+    compareMandi: string;
+    spotRates: string;
+    mandiYard: string;
+    arrivals: string;
+  };
+  forecast: {
+    title: string;
+    subtitle: string;
+    dayForecast: string;
+    trendUp: string;
+    trendDown: string;
+    trendStable: string;
+    confidence: string;
+    volatility: string;
+    projectedGain: string;
+    riskAdvisory: string;
+  };
+  advisor: {
+    title: string;
+    subtitle: string;
+    recommendation: string;
+    sellNowAdvice: string;
+    waitAdvice: string;
+    partialSelling: string;
+    holdingCost: string;
+    storageRisk: string;
+    priceGainVsCost: string;
+  };
+  calculator: {
+    title: string;
+    subtitle: string;
+    cropQuantity: string;
+    grossRevenue: string;
+    totalExpenses: string;
+    freightDeduction: string;
+    mandiCess: string;
+    weighingLabor: string;
+    netInHand: string;
+  };
+  marketplace: {
+    title: string;
+    subtitle: string;
+    fpoDirectory: string;
+    buyerDirectory: string;
+    produceListings: string;
+    receivedBids: string;
+    bulkSelling: string;
+    acceptOffer: string;
+    rejectOffer: string;
+    sendCounter: string;
+    counterPrice: string;
+    counterNote: string;
+    deliveryTerms: string;
+    paymentTerms: string;
+    poolBulkLot: string;
+  };
+  fpoHub: {
+    title: string;
+    subtitle: string;
+    memberIntake: string;
+    memberInventory: string;
+    bulkLots: string;
+    buyerBids: string;
+    buyerRequirements: string;
+    memberFarmers: string;
+    aggregateNewLot: string;
+    selectedBatches: string;
+    totalPooledQuantity: string;
+    averageExpectedPrice: string;
+    publishLot: string;
+    pooledWithFPO: string;
+    readyForPooling: string;
+  };
+  buyerPortal: {
+    title: string;
+    subtitle: string;
+    procurementTitle: string;
+    myRequirements: string;
+    negotiationDesk: string;
+    directFarmerLots: string;
+    fpoBulkLots: string;
+    submitBid: string;
+    bidPrice: string;
+    deliveryPreference: string;
+    postRequirement: string;
+    counterOffers: string;
+  };
+  notifications: {
+    title: string;
+    subtitle: string;
+    all: string;
+    unread: string;
+    offers: string;
+    alerts: string;
+    deals: string;
+    markAllRead: string;
+    clearAll: string;
+    markAsRead: string;
+    markAsUnread: string;
+    delete: string;
+    noNotifications: string;
+    noUnread: string;
+    openFullCenter: string;
+    categories: {
+      offerReceived: string;
+      counterReceived: string;
+      lotAggregated: string;
+      priceAlert: string;
+      contractFinalized: string;
+      listingAdded: string;
+      stockAlert: string;
+      recommendation: string;
+    };
+  };
+  profile: {
+    title: string;
+    subtitle: string;
+    personalDetails: string;
+    fullName: string;
+    mobileNumber: string;
+    emailAddress: string;
+    village: string;
+    taluka: string;
+    district: string;
+    state: string;
+    landAcreage: string;
+    preferredLanguage: string;
+    preferredCrops: string;
+    saveChanges: string;
+    savedSuccess: string;
+    orgDetails: string;
+    businessDetails: string;
+  };
+  settings: {
+    title: string;
+    subtitle: string;
+    languageSelection: string;
+    languageDesc: string;
+    priceAlerts: string;
+    priceAlertsDesc: string;
+    prototypeMode: string;
+    prototypeModeDesc: string;
+  };
+}
+
